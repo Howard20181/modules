@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme: Theme) =>
       }
     },
     footer: {
-      height: 80,
+      height: 32,
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
@@ -231,6 +231,9 @@ function Layout (props: { children: React.ReactNode }): React.ReactElement {
       </Container>
       <div className={classes.footer}>
         &#169; 2021 - {new Date().getFullYear()} New Xposed Module Repository
+      </div>
+      <div className={classes.footer}>
+        <a href="https://lsposed.org/privacy">Privacy Policy</a>
       </div>
     </div>
   )
