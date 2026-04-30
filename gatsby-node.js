@@ -671,9 +671,9 @@ exports.onPostBuild = async ({ graphql }) => {
     if (repo.latestSnapshotRelease) {
       repo.snapshotReleases = [latestSnapshotRelease]
     }
-    if (!repo.readmeHTML && repo.readme) repo.readmeHTML = repo.childGitHubReadme.childMarkdownRemark.html
     delete repo.readme
     delete repo.childGitHubReadme
+    delete repo.readmeHTML
   }
   fs.writeFileSync(`${rootPath}/modules.json`, JSON.stringify(modules))
 }
